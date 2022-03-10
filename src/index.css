@@ -1,0 +1,57 @@
+/* VARIABLES */
+:root {
+  /* colors */
+  --bg-color: #cdd5da;
+
+  /* fonts */
+  --font-title: 'Lato', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-black: 900;
+  --font-bold: 700;
+  --font-regular: 400;
+  --font-sm: 1.6rem; /* 16px */
+  --font-md: 2rem; /* 20px */
+  --font-lg: 2.4rem; /* 24px */
+  --font-xl: 3.4rem; /* 34px */
+  --font-2xl: 4.8rem; /* 48px */
+}
+
+/* GLOBAL */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: var(--font-regular);
+  font-size: var(--font-sm);
+}
+
+h1,
+h2 {
+  font-family: var(--font-title);
+  font-weight: var(--font-black);
+}
+
+h1 {
+  font-size: var(--font-2xl);
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
