@@ -6,16 +6,24 @@ const ViewModal = styled.div`
   top: 50%;
   left: 50%;
   margin-right: -50%;
+  width: 30rem;
+  height: 40rem;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40rem;
-  height: 40rem;
   background-color: var(--white-color);
   border-radius: 2rem;
   border: 2px solid var(--btn-color);
   z-index: 1;
+
+  @media (min-width: 375px) {
+    width: 35rem;
+  }
+
+  @media (min-width: 414px) {
+    width: 40rem;
+  }
 `;
 
 const Container = styled.div`
