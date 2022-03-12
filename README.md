@@ -1,6 +1,7 @@
 # PokemonHub
 
-Website where you can find information about each the different existing Pokemon.
+Website where you can find information about each the different existing Pokemon.</br>
+You can visit the project live site [here](https://pokemonhub.ericksaavedra.me/).
 
 ## Installation
 
