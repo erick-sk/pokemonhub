@@ -33,19 +33,23 @@ const Title = styled.h1`
   color: var(--white-color);
 `;
 
-const Pokemon = ({ data }) => {
+const Pokemon = ({ data, setInfoToModal, setShowModal }) => {
   return (
-    <Item>
-      <Title>{data.name}</Title>
-      <img
-        src={data.sprites.other.home.front_default}
-        width="250px"
-        alt={data.name}
+    <>
+      <Item
         onClick={() => {
-          console.log(data);
+          setInfoToModal(data);
+          setShowModal(true);
         }}
-      />
-    </Item>
+      >
+        <Title>{data.name}</Title>
+        <img
+          src={data.sprites.other.home.front_default}
+          width="250px"
+          alt={data.name}
+        />
+      </Item>
+    </>
   );
 };
 

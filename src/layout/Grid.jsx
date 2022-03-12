@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import Pagination from '../components/Pagination';
 import Pokemon from '../components/Pokemon';
+import Modal from '../components/Modal';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -44,6 +46,9 @@ const Grid = ({
   nextPage,
   backPage,
 }) => {
+  const [infoToModal, setInfoToModal] = useState({});
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <Container>
       <Pagination
@@ -52,7 +57,7 @@ const Grid = ({
 
       {loading ? (
         <SpinnerLoading>
-          <div class="lds-ripple">
+          <div className="lds-ripple">
             <div></div>
             <div></div>
           </div>
@@ -60,10 +65,21 @@ const Grid = ({
       ) : (
         <ListPokemons>
           {pageResults.map(([id, data]) => (
-            <Pokemon key={id} data={data} />
+            <Pokemon
+              key={id}
+              data={data}
+              setInfoToModal={setInfoToModal}
+              setShowModal={setShowModal}
+            />
           ))}
         </ListPokemons>
       )}
+
+      <Modal
+        infoToModal={infoToModal}
+        showModal={showModal}
+        setShowModal={setShowModal}
+      />
     </Container>
   );
 };

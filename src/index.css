@@ -4,6 +4,7 @@
   --white-color: #fff;
   --bg-color: #cdd5da;
   --nav-color: #0a254d;
+  --text-color: #18242e;
   --btn-color: #0061af;
   --btn-hover-color: #d1eefd;
 
@@ -58,6 +59,14 @@ h1,
 h2,
 p {
   margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  text-transform: capitalize;
 }
 
 /* SPINNER */
