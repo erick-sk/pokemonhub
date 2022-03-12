@@ -33,6 +33,14 @@ const Title = styled.h1`
   color: var(--white-color);
 `;
 
+const Number = styled.span`
+  color: var(--white-color);
+  font-size: var(--font-lg);
+  font-weight: var(--font-bold);
+  margin-right: 1rem;
+  align-self: flex-end;
+`;
+
 const Pokemon = ({ data, setInfoToModal, setShowModal }) => {
   return (
     <>
@@ -43,11 +51,14 @@ const Pokemon = ({ data, setInfoToModal, setShowModal }) => {
         }}
       >
         <Title>{data.name}</Title>
+
         <img
           src={data.sprites.other.home.front_default}
           width="250px"
           alt={data.name}
         />
+
+        <Number>#{data.order}</Number>
       </Item>
     </>
   );
