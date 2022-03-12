@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { generateID } from '../helpers/generateId';
+import generateID from '../helpers/generateID';
 
 const ViewModal = styled.div`
   position: fixed;
